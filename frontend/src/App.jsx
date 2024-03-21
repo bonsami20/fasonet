@@ -9,11 +9,7 @@ import DeleteData from "./pages/DeleteData";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/datas/create" element={<CreateData />} />
-      <Route path="/datas/details/:id" element={<ShowData />} />
-      <Route path="/datas/edit/:id" element={<EditData />} />
-      <Route path="/datas/delete/:id" element={<DeleteData />} />
+     <p>Josue</p>
     </Routes>
   );
 };
