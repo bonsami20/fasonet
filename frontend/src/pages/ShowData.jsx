@@ -44,15 +44,15 @@ const ShowData = () => {
             <span>{data.technologie}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Debit</span>
+            <span className="text-xl mr-4 text-gray-500">Débit</span>
             <span>{data.debit}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Create Time</span>
+            <span className="text-xl mr-4 text-gray-500">Date de création</span>
             <span>{new Date(data.createdAt).toString()}</span>
           </div>
           <div className="my-4">
-            <span className="text-xl mr-4 text-gray-500">Last Update Time</span>
+            <span className="text-xl mr-4 text-gray-500">Mise à jour</span>
             <span>{new Date(data.updatedAt).toString()}</span>
           </div>
         </div>

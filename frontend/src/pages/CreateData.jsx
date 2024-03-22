@@ -11,6 +11,7 @@ const CreateDatas = () => {
   const [debit, setDebit] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleSaveData = () => {
     const data = {
@@ -24,10 +25,14 @@ const CreateDatas = () => {
       .then(() => {
         setLoading(false);
         navigate("/");
+        enqueueSnackbar("Vos données ont été crées avec succès ", {
+          variant: "success",
+        });
       })
       .catch((error) => {
         setLoading(false);
         // alert('An error happened. Please Check console');
+        enqueueSnackbar("Error", { variant: "error" });
         console.log(error);
       });
   };
@@ -35,7 +40,7 @@ const CreateDatas = () => {
   return (
     <div className="p-4">
       <BackButton />
-      <h1 className="text-3xl my-4">Create Data</h1>
+      <h1 className="text-3xl my-4">Créer vos donneés</h1>
       {loading ? <Spinner /> : ""}
       <div className="flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
         <div className="my-4">
@@ -57,7 +62,7 @@ const CreateDatas = () => {
           />
         </div>
         <div className="my-4">
-          <label className="text-xl mr-4 text-gray-500">debit</label>
+          <label className="text-xl mr-4 text-gray-500">Débit</label>
           <input
             type="number"
             value={debit}
@@ -66,7 +71,7 @@ const CreateDatas = () => {
           />
         </div>
         <button className="p-2 bg-sky-300 m-8" onClick={handleSaveData}>
-          Save
+          Sauvegarder
         </button>
       </div>
     </div>

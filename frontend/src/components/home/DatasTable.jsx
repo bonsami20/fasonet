@@ -14,9 +14,9 @@ const DatasTable = ({ datas }) => {
             Technologie
           </th>
           <th className="border border-slate-600 rounded-md max-md:hidden">
-            Debit
+            Débit
           </th>
-          <th className="border border-slate-600 rounded-md">Operations</th>
+          <th className="border border-slate-600 rounded-md">Opérations</th>
         </tr>
       </thead>
       <tbody>
